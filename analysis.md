@@ -13,7 +13,7 @@
 ### Λειτουργικές Απαιτήσεις
 ### Μη Λειτουργικές Απαιτήσεις
 ### Σενάρια Χρήσης με Uml
-![Use Case image](https://github.com/PekosV/Codeine_TEL/blob/master/img/UseCaseV2.jpeg)
+![Use Case image](https://github.com/PekosV/Codeine_TEL/blob/master/img/UseCaseV2.jpg)
 ### Wireframes
 ### Τεχνικές Προδιαγραφές
 ### Μοντέλο Οντοτήτων Συσχετίσεων Βάσης Δεδομένων
