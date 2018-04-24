@@ -95,9 +95,11 @@
 ![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/TeamMemberSimple.png)
 
 
-**Team Member Simple**
-![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/teldatabase.png)
-
 
 ### Τεχνικές Προδιαγραφές
 ### Μοντέλο Οντοτήτων Συσχετίσεων Βάσης Δεδομένων
+
+**Database Schema**
+
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/teldatabase.png)
+
