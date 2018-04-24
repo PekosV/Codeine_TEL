@@ -37,5 +37,11 @@
 **Sign Up**
 ![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/SignUp.png)
 
+**HomePage**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/HomePage.png)
+
+**Edit My account**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/EditMyAccount.png)
+
 ### Τεχνικές Προδιαγραφές
 ### Μοντέλο Οντοτήτων Συσχετίσεων Βάσης Δεδομένων
