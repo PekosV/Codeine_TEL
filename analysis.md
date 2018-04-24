@@ -33,5 +33,9 @@
 ### Σενάρια Χρήσης με Uml
 ![Use Case image](https://github.com/PekosV/Codeine_TEL/blob/master/img/UseCase3.jpg)
 ### Wireframes
+
+**Sign Up**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/SignUp.png)
+
 ### Τεχνικές Προδιαγραφές
 ### Μοντέλο Οντοτήτων Συσχετίσεων Βάσης Δεδομένων
