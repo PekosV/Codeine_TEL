@@ -43,5 +43,57 @@
 **Edit My account**
 ![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/EditMyAccount.png)
 
+**Create Project**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/CreateProject.png)
+
+**FAQ**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/FAQ.png)
+
+**Project**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Project.png)
+
+**Issues**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Issues.png)
+
+**Epic**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Epic.png)
+
+**Join Project**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/JoinProject.png)
+
+**Join Team**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/JoinTeam.png)
+
+**My Projects**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/MyProjects.png)
+
+**My Teams**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/MyTeams.png)
+
+**Project Owner** 
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/ProjectOwner.png)
+
+**Sprint**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Sprint.png)
+
+**Story**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Story.png)
+
+**Sub-Tasks**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Sub-tasks.png)
+
+**Tasks**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/Tasks.png)
+
+**Team Creation**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/TeamCreation.png)
+
+**Team Member Owner**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/TeamMemberOwner.png)
+
+**Team Member Simple**
+![Sign Up](https://github.com/PekosV/Codeine_TEL/blob/master/Wireframes%20PNG/TeamMemberSimple.png)
+
+
 ### Τεχνικές Προδιαγραφές
 ### Μοντέλο Οντοτήτων Συσχετίσεων Βάσης Δεδομένων
