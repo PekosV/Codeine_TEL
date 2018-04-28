@@ -1,5 +1,5 @@
 .bg-light {
-    background-color: #174d67!important;
+    background-color: #005d8a!important;
 }
 
 .nav-link {
@@ -51,4 +51,13 @@ body {
 }
 btn-outline-success.focus, .btn-outline-success:focus {
     box-shadow: 0 0 0 0.2rem rgba(33, 81, 128, 0.5);
+}
+a {
+    color: #d6d6d6;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
