@@ -61,3 +61,12 @@ a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
+
+
+#forgpass{
+	color: #a9a4a4;
+}
+
+#forgpass:hover{
+	color: #5d5353;
+}
