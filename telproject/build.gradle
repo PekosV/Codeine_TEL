@@ -25,6 +25,7 @@ repositories {
 
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-cache')
     compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
     compile('org.springframework.boot:spring-boot-starter-data-mongodb')
     compile('org.springframework.boot:spring-boot-starter-data-rest')
@@ -32,9 +33,9 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-webflux')
+    compile('org.springframework.data:spring-data-rest-hal-browser')
     compile('org.springframework.session:spring-session-core')
     runtime('org.springframework.boot:spring-boot-devtools')
-    runtime('com.microsoft.sqlserver:mssql-jdbc')
     runtime('mysql:mysql-connector-java')
     runtime('org.postgresql:postgresql')
     testCompile('org.springframework.boot:spring-boot-starter-test')
