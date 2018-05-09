@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-public class .hello{
+public class hello{
 
     @RequestMapping("/hello")
     public String sayHello(@RequestParam(value = "name",required=false, defaultValue = "Marino") String name) {
