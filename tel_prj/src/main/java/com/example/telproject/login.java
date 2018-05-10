@@ -11,10 +11,8 @@ import java.util.Map;
 @Controller
 public class login {
 
-    @RequestMapping("/sapisa")
-    @ResponseStatus(HttpStatus.OK)
-    public String greeting2(String name, Model model) {
-        model.addAttribute("name", name);
+    @RequestMapping("/login")
+    public String getLoginInput() {
         return "login";
     }
 
