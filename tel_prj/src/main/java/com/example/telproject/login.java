@@ -13,7 +13,7 @@ public class login {
 
     @RequestMapping("/login")
     public String getLoginInput() {
-        return "login";
+        return "login.html";
     }
 
 }
