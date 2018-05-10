@@ -8,18 +8,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController
+@Controller
 public class login {
 
-    @RequestMapping(value = "/sapisa", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping("/sapisa")
     @ResponseStatus(HttpStatus.OK)
-    public Map<String, String> greeting2(String name, Model model) {
+    public String greeting2(String name, Model model) {
         model.addAttribute("name", name);
-        HashMap<String, String> map = new HashMap<>();
-        map.put("key", "value");
-        map.put("foo", "bar");
-        map.put("aa", "bb");
-        return map;
+        return "login";
     }
 
 }
