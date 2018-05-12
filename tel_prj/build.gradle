@@ -38,6 +38,7 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-webflux')
     compile('org.springframework.session:spring-session-core')
     runtime('org.springframework.boot:spring-boot-devtools')
+    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
     runtime('org.postgresql:postgresql')
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     testCompile('org.springframework.boot:spring-boot-starter-test')
