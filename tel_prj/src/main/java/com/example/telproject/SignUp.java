@@ -19,7 +19,7 @@ public class SignUp {
     @RequestMapping(value= "/signup" ,method = RequestMethod.GET)
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
-        return "signup.html";
+        return "signup";
     }
 
 
