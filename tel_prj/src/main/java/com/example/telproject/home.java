@@ -10,8 +10,7 @@ import java.util.Map;
 
 @RestController
 public class home {
-
-    @RequestMapping(value = "/home", method = RequestMethod.GET, produces = {"application/json"})
+    @RequestMapping(value = "/", method = RequestMethod.GET, produces = {"application/json"})
     @ResponseStatus(HttpStatus.OK)
     public Map<String, String> home_controller(String name, Model model) {
         model.addAttribute("name", name);
@@ -21,5 +20,4 @@ public class home {
         map.put("bill", "kwlogayros");
         return map;
     }
-
 }
