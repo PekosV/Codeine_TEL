@@ -9,11 +9,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class login {
+public class LoginController {
 
-    @RequestMapping("/login")
-    public String getLoginInput() {
-        return "login.html";
+
+    @RequestMapping(value="/login")
+    public String getLoginForm2() {
+        //System.out.println(allParams);
+        return "login";
     }
+
+
 
 }
