@@ -30,34 +30,18 @@ configurations {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    //compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
-    //compile('org.springframework.boot:spring-boot-starter-data-mongodb')
-    //compile('org.springframework.boot:spring-boot-starter-data-rest')
-    //compile('org.springframework.boot:spring-boot-starter-hateoas')
+    compile("org.springframework.boot:spring-boot-starter-security")
     compile('org.springframework.boot:spring-boot-starter-web')
-    //compile('org.springframework.boot:spring-boot-starter-webflux')
-    //compile('org.springframework.session:spring-session-core')
+
     runtime('org.springframework.boot:spring-boot-devtools')
-    //compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
-    //runtime('org.postgresql:postgresql')
-    //providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
-    //testCompile('org.springframework.boot:spring-boot-starter-test')
-    //testCompile('io.projectreactor:reactor-test')
 
-    // JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
-   // compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    // Use MySQL Connector-J
-
-    //compile 'mysql:mysql-connector-java'
 
     compile("org.springframework.boot:spring-boot-starter-web")
 
-//    compile "org.springframework.boot:spring-boot-starter-security"
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
     compile 'mysql:mysql-connector-java'
     compileOnly 'org.projectlombok:lombok:1.16.20'
     runtime 'net.java.dev.jna:jna'
-//    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
     compile("org.springframework.boot:spring-boot-starter-actuator")
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
