@@ -24,6 +24,12 @@ public class User {
     @Column(name="email")
     private String email;
 
+    @Column(name="firstname")
+    private String firstname;
+
+    @Column(name="lastname")
+    private String lastname;
+
     @Column(name="password")
     private String password;
 
@@ -36,6 +42,27 @@ public class User {
 
     @Column(name="fee")
     private Integer fee;
+
+    public User (){};
+
+    public User( String email,
+                String username,
+                String firstname,
+                String lastname,
+                String password
+                ){
+
+        this.email = email;
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.password = password;
+        this.customer_boolean = 0;
+        this.admin_boolean= 0;//fix this in the future
+        this.role = 0;
+        this.fee =0 ;
+
+    }
 
     public Integer getId() {
         return id;
