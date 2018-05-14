@@ -1,17 +1,10 @@
 package com.example.telproject;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @Controller
 public class SignUp {
@@ -23,7 +16,7 @@ public class SignUp {
     }
 
 
-    @RequestMapping(value = "/signup", method = RequestMethod.POST, produces="application/json" )
+   /* @RequestMapping(value = "/signup", method = RequestMethod.POST, produces="application/json" )
       public Map<String, String> signup_post(@RequestParam("firstname") String firstname,@RequestParam("lastname") String lastname,@RequestParam("username") String username,@RequestParam("email") String email, @RequestParam("password") String password,@RequestParam("reenterpassword") String reenterpassword) {
 
         HashMap<String, String> map = new HashMap<>();
@@ -38,7 +31,7 @@ public class SignUp {
         System.out.println("PAASSSWORDDDDDDDDDD : ");
         System.out.println(map);
         return map;
-    }
+    }*/
 
 
 }

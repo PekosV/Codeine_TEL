@@ -1,22 +1,68 @@
 package com.example.telproject.database;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.hibernate.annotations.DynamicUpdate;
+
+import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
+@Table(name="user")
+@DynamicUpdate
+//@Data
 public class User {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+    @Column(name="iduser")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer  id ;
+
+    @Column(name="role")
     private Integer role;
+
+    @Column(name="username")
     private String username;
-    private String password;
+
+
+    @Column(name="email")
     private String email;
-    private Integer is_customer;
+
+    @Column(name="firstname")
+    private String firstname;
+
+    @Column(name="lastname")
+    private String lastname;
+
+    @Column(name="password")
+    private String password;
+
+    @Column(name="customer_boolean")
+    private Integer customer_boolean;
+
+    @Column(name="admin_boolean")
+    private Integer admin_boolean;
 
 
+    @Column(name="fee")
+    private Integer fee;
+
+    public User (){};
+
+    public User( String email,
+                String username,
+                String firstname,
+                String lastname,
+                String password
+                ){
+
+        this.email = email;
+        this.username = username;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.password = password;
+        this.customer_boolean = 0;
+        this.admin_boolean= 0;//fix this in the future
+        this.role = 0;
+        this.fee =0 ;
+
+    }
 
     public Integer getId() {
         return id;
@@ -26,11 +72,19 @@ public class User {
         this.id = id;
     }
 
+    public Integer getRole() {
+        return role;
+    }
+
+    public void setRole(Integer role) {
+        this.role = role;
+    }
+
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String name) {
+    public void setUsername(String username) {
         this.username = username;
     }
 
@@ -50,18 +104,73 @@ public class User {
         this.password = password;
     }
 
-    public Integer getRole() {
-        return role;
+    public Integer getCustomer_boolean() {
+        return customer_boolean;
     }
 
-    public void setRole(Integer role) {
-        this.role = role;
+    public void setCustomer_boolean(Integer customer_boolean) {
+        this.customer_boolean = customer_boolean;
     }
-    public Integer setIs_customer(){
-        return is_customer;
+
+    public Integer getAdmin_boolean() {
+        return admin_boolean;
     }
-    public void setIs_customer(Integer is_customer){
-        this.is_customer = is_customer;
+
+    public void setAdmin_boolean(Integer admin_boolean) {
+        this.admin_boolean = admin_boolean;
     }
+
+    public Integer getFee() {
+        return fee;
+    }
+
+    public void setFee(Integer fee) {
+        this.fee = fee;
+    }
+// public Integer getId() {
+    //     return id;
+    // }
+    //
+    // public void setId(Integer id) {
+    //     this.id = id;
+    // }
+    //
+    // public String getUsername() {
+    //     return username;
+    // }
+    //
+    // public void setUsername(String name) {
+    //     this.username = username;
+    // }
+    //
+    // public String getEmail() {
+    //     return email;
+    // }
+    //
+    // public void setEmail(String email) {
+    //     this.email = email;
+    // }
+    //
+    // public String getPassword() {
+    //     return password;
+    // }
+    //
+    // public void setPassword(String password) {
+    //     this.password = password;
+    // }
+    //
+    // public Integer getRole() {
+    //     return role;
+    // }
+    //
+    // public void setRole(Integer role) {
+    //     this.role = role;
+    // }
+    // public Integer setIs_customer(){
+    //     return is_customer;
+    // }
+    // public void setIs_customer(Integer is_customer){
+    //     this.is_customer = is_customer;
+    // }
 
 }
