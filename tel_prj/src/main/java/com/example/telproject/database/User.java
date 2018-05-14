@@ -1,6 +1,5 @@
 package com.example.telproject.database;
 
-import jdk.jfr.Unsigned;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.*;
@@ -13,7 +12,7 @@ public class User {
     @Id
     @Column(name="iduser")
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Unsigned   id ;
+    private Integer  id ;
 
     @Column(name="role")
     private Integer role;
@@ -28,10 +27,10 @@ public class User {
     @Column(name="password")
     private String password;
 
-    @Column(columnDefinition = "TINYINT",name="customer_boolean")
+    @Column(name="customer_boolean")
     private Integer customer_boolean;
 
-    @Column(columnDefinition = "TINYINT",name="admin_boolean")
+    @Column(name="admin_boolean")
     private Integer admin_boolean;
 
 
