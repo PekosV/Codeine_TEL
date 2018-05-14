@@ -74,10 +74,10 @@ ENGINE = InnoDB;
 -- Table `mydb`.`project`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`project` (
-  `project_id` INT NOT NULL,
+  `project_id` INT NOT NULL AUTO_INCREMENT,
   `project_name` VARCHAR(45) NOT NULL,
   `team_team_id` INT NOT NULL,
-  PRIMARY KEY (`project_id`) AUTO_INCREMENT,
+  PRIMARY KEY (`project_id`) ,
   UNIQUE INDEX `project_id_UNIQUE` (`project_id` ASC),
   UNIQUE INDEX `project_name_UNIQUE` (`project_name` ASC),
   INDEX `fk_project_team1_idx` (`team_team_id` ASC),
@@ -93,7 +93,7 @@ ENGINE = InnoDB;
 -- Table `mydb`.`user_has_project`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`user_has_project` (
-  `user_iduser` INT UNSIGNED NOT NULL,
+  `user_iduser` INT  NOT NULL,
   `project_project_id` INT NOT NULL,
   `permissions` INT NOT NULL,
   PRIMARY KEY (`user_iduser`, `project_project_id`),
