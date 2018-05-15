@@ -39,6 +39,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .withUser("nikos").password(psw).authorities("USER").roles("USER");
 //    }
 
+
+
+
+    
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
 //		auth.inMemoryAuthentication()
