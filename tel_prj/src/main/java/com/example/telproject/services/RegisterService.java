@@ -31,23 +31,36 @@ public class RegisterService {
                 throw new Exception("Empty Field");
             }
 
-            if (entry.getKey() == "password" && this.isPasswordStrong(entry.getValue())) {  //se periptwsh pou den balei strong password
+            if (entry.getKey() == "password" && !this.isPasswordStrong(entry.getValue())) {  //se periptwsh pou den balei strong password
                 //if password not strong
                 throw new Exception("Password not strong enough");
 
             }
         }
+        System.out.println(allParams.get("password"));
+        System.out.println(allParams.get("reenterpassword"));
 
-         userRepository.findOne(allParams.get("")); //an yparxei hdh o user
-//         if(a){
-//            throw new Exception("User exists");
-//        }
+        if(!(allParams.get("password").equals(allParams.get("reenterpassword")) )){
+            throw new Exception("Different passwords given");
 
-        //creating a new user
+        }
+
+
         User new_user= new User(allParams.get("email"),allParams.get("username"),allParams.get("firstname"),allParams.get("lastname"),allParams.get("password"));
+        String username= userRepository.findUserByUsername(allParams.get("username"));
+        if(username !=null && !username.isEmpty() ){ //an brethei o user
+             System.out.println("User  existssssssssss\n\n\n");
+            throw new Exception("User with same username exists");
+        }
+
+        String email= userRepository.findUserByUsername(allParams.get("email"));
+        if(email !=null && !email.isEmpty() ){ //an brethei o user
+            System.out.println("User existssssssssss\n\n\n");
+            throw new Exception("User with same email exists");
+        }
+
+        System.out.println("Creating userrrrrrrr\n\n\n");
         userRepository.save(new_user);
-
-
 
 
         return null;

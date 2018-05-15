@@ -24,80 +24,64 @@ public class UserController {
 
 	@PostMapping(path="/signup")
 	public String register(@RequestParam Map<String, String> allParams,Model model){
-//	        @RequestParam String email,
-//								   @RequestParam String username,
-//								   @RequestParam String firstname,
-//								   @RequestParam String lastname,
-//
-//								   @RequestParam String password,
-//								   @RequestParam String reenterpassword
-//
-
-
-
-//		if(!reenterpassword.equals(password) ){
-//			return "redirect:/signup";
-//		}
 
         try {
             registerService.createUser(allParams);
         } catch (Exception e) {
-            if(e.getMessage()=="User exists"){
+            if(e.getMessage()=="User with same username exists"){
                 model.addAttribute("oldFields", allParams);
                 model.addAttribute("error", "exists");
-                return "/signup";
-            }else if(e.getMessage()=="Password not strong enough"){
-                model.addAttribute("oldFields", allParams);
-                model.addAttribute("error", "empty");
-                return "/signup";
+                System.out.println("USERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR\n\n\ndv");
+                return "<h1>User  with same username already exists </h1>";
             }else if(e.getMessage()=="Empty Field"){
                 model.addAttribute("oldFields", allParams);
+                model.addAttribute("error", "empty");
+                System.out.println("Empty Fieldddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\n\n\n\n");
+
+
+                return "<h1>Error afises empty fields</h1>";
+
+            }else if(e.getMessage()=="Empty Field"){
+                model.addAttribute("oldFields", allParams);
+                model.addAttribute("error", "empty");
+                System.out.println("Empty Fieldddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\n\n\n\n");
+
+
+                return "<h1>Error afises empty fields</h1>";
+            }else if(e.getMessage()=="Password not strong enough"){
+                model.addAttribute("oldFields", allParams);
                 model.addAttribute("error", "pwd_not_good");
-                return "/signup";
-            }else{
-                System.out.println("ERROR HAPPENED CAN'T HANDLE");
-                return "/";
+
+                System.out.println("Password not strong enoughhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh\n\n\n\n");
+
+                return "<h1>The password not stong</h1>";
+
+            }
+            else if(e.getMessage()=="Different passwords given"){
+                model.addAttribute("oldFields", allParams);
+                model.addAttribute("error", "passwords different");
+
+                System.out.println("Different passwords givennnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn\n\n\n\n");
+
+                return "<h1>Different passwords given</h1>";
+
+            }
+            else{
+                System.out.println("ERROR HAPPENED CAN'T HANDLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEee\n\n\n\n");
+                return "Errorrrrr";
             }
         }
 
-//		User new_user= new User(allParams.get("email"),allParams.get("username"),allParams.get("firstname"),allParams.get("lastname"),allParams.get("password"));
-//		userRepository.save(new_user);
+
 
 		return "redirect:/home";
-//		URI location = ServletUriComponentsBuilder
-//				.fromCurrentRequest().path("/home")
-//				.buildAndExpand().toUri();
-//
-//		//return ResponseEntity.created().body("Home");
-//		return ResponseEntity.created(location).header("MyResponseHeader", "MyValue").body("Hello World");
 	}
 
 
-//		@GetMapping(path="/add") // Map ONLY GET Requests
-//	public User addNewUser (@RequestParam String name
-//			, @RequestParam String email) {
-//		// @ResponseBody means the returned String is the response, not a view name
-//		// @RequestParam means it is a parameter from the GET or POST request
-//
-//		 User n = new User();
-//		 n.setEmail(email);
-//		 n.setPassword("pass");
-//		 n.setRole(1);
-//		 n.setUsername(name);
-//		 n.setAdmin_boolean(1);
-//		 n.setCustomer_boolean(1);
-//		 n.setFee(1);
-//
-//
-//		 userRepository.save(n);
-//
-//		return n;
-//	}
 
 	@GetMapping(path="/all")
 	public @ResponseBody Iterable<User> getAllUsers() {
 		// This returns a JSON or XML with the users
-		//User user =  new User();
 		return userRepository.findAll();
 	}
 }
