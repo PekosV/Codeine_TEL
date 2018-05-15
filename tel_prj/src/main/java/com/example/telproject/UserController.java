@@ -57,7 +57,7 @@ public class UserController {
                 return "<h1>The password not stong</h1>";
 
             }
-            else if(e.getMessage()=="Different passwords given"){
+            else if(e.getMessage()== "Different passwords given" ){
                 model.addAttribute("oldFields", allParams);
                 model.addAttribute("error", "passwords different");
 
