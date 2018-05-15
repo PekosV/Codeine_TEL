@@ -42,7 +42,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-    
+    //yoleelaer
+    //aesr
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
 //		auth.inMemoryAuthentication()
