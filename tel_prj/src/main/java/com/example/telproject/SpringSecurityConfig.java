@@ -9,12 +9,19 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private PasswordEncoder myPasswordEncoderValue=null;
+    private final String USER_NAME_QUERY="select email,password from user  where email=?";
+    private final String USER_ROLE_QUERY="select email,role "+"from user "+" where email = ?";
+    @Autowired
+    private DataSource dataSource;
+
+
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -24,14 +31,34 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         myPasswordEncoderValue = new BCryptPasswordEncoder();
         return myPasswordEncoderValue;
     }
-    @Autowired
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        String psw = myPasswordEncoderValue.encode("yava");
-        auth.inMemoryAuthentication()
-                .passwordEncoder(myPasswordEncoder())
-                .withUser("nikos").password(psw).authorities("USER").roles("USER");
-    }
+//    @Autowired
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        String psw = myPasswordEncoderValue.encode("yava");
+//        auth.inMemoryAuthentication()
+//                .passwordEncoder(myPasswordEncoder())
+//                .withUser("nikos").password(psw).authorities("USER").roles("USER");
+//    }
 
+
+
+
+    //yoleelaer
+    //aesr
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+//		auth.inMemoryAuthentication()
+//				.withUser("mama").password("1234").roles("PARENT")
+//			.and()
+//				.withUser("paido").password("3210").roles("ORGANIZER")
+//			.and()
+//				.withUser("mpampas").password("42069").roles("PARENT");
+
+        auth.jdbcAuthentication()
+                .usersByUsernameQuery(this.USER_NAME_QUERY)
+                .authoritiesByUsernameQuery(this.USER_ROLE_QUERY)
+                .dataSource(dataSource)
+                .passwordEncoder(passwordEncoder);
+    }
 
     @Override
     protected void configure(HttpSecurity httpSec) throws Exception {
