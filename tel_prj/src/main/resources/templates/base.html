@@ -13,13 +13,18 @@
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <title>Scrum</title>
 </head>
+
+<style type="text/css">
+   body { background: CornflowerBlue !important; }
+</style>
+
 <body>
 
 <!-- Navigation bar  Start -->
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="col-md-2">
-            <a class="navbar-brand" href="#"><img width="170px" height="35px" src="../img/logo_2.png"/></a>
+            <a class="navbar-brand" href="#"><img width="170px" height="35px" src="../static/img/logo_2.png"/></a>
         </div>
 
         <div class="collapse navbar-collapse col-md-4" id="navbarSupportedContent">
@@ -43,12 +48,12 @@
         </div>
 
         <div class="col-md-3">
-            <a class="navbar-brand" href="#"><img width="30px" height="30px" src="../img/envel.png"/></a>
-            <a class="navbar-brand" href="#"><img width="30px" height="30px" src="../img/bell.png"/></a>
+            <a class="navbar-brand" href="#"><img width="30px" height="30px" src="../static/img/envel.png"/></a>
+            <a class="navbar-brand" href="#"><img width="30px" height="30px" src="../static/img/bell.png"/></a>
             <!--<a class="navbar-brand" href="#"><img width="30px" height="30px" src="../img/profile.png" /></a>-->
 
             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-               aria-expanded="false"><img width="30px" height="30px" src="../img/profile.png"/></a>
+               aria-expanded="false"><img width="30px" height="30px" src="../static/img/profile.png"/></a>
             <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">MyProfile</a>
                 <a class="dropdown-item" href="#">Settings</a>
@@ -61,6 +66,144 @@
     </nav>
 </div>
 <!-- Navigation bar  End -->
+<div class="row">
+	<div class="breadcrumb col-md-4 " style="background-color:CornflowerBlue; color:CornflowerBlue">
+		<ul class ="breadcrumb">
+			<li class="breadcrumb-item" ><a href="base.html">>home</a></li>
+		</ul>
+	</div> 
+	<div class="col-md-6"></div>
+	<div class="dropdown col-md-2 " >
+	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background-color:Navy;">
+		Sort by
+	  </button>
+	  <div class="dropdown-menu">
+		<a class="dropdown-item" href="#">Date</a>
+		<a class="dropdown-item" href="#">Project</a>
+		<a class="dropdown-item" href="#">Team</a>
+	  </div>
+	</div> 	
+
+	
+</div>
+<!--table-->
+<div class="container">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading" style="color:white;"><h3>FEED</h3></div>
+				<div class="panel-body">
+					<table class="table table-condensed" style="border-collapse:collapse; color:black;">
+
+						<thead>
+							<tr><th> </th>
+								<th>Date</th>
+								<th>Commit</th>
+								<th>Time</th>
+								<th>Project</th>
+								<th>team</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+									  <td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" style="color:black;"></span></button></td>
+								<td>16/5/2018</td>
+								<td>#1</td>
+								<td>18:35</td>
+								<td>Codeine_TEL</td>
+							  <td> Codeine</td>
+
+							</tr>
+							<tr>
+								<td colspan="12" class="hiddenRow">
+									<div class="accordian-body collapse" id="demo1" style="color:black;"> 
+									  <table class="table table-striped">
+											<thead>
+												<tr><td><a href="WorkloadURL"> link</a></td><td>Details</td><td>Details</td></tr>
+												<tr><th>#1</th><th>#2</th><th>#3</th><th> #4</th><th> #5</th><th>#6</th></tr>
+											</thead>
+											<tbody>
+												<tr><td>#1</td><td>#2</td><td>#3</td><td>#4</td><td>#5</td><td><a href="#" class="btn btn-default btn-sm">
+										  <i class="glyphicon glyphicon-cog"></i></a></td></tr>
+												
+											 
+											
+											</tbody>
+										</table>
+									  
+									</div>
+								</td>
+							</tr>
+							<tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+									<td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" style="color:black;"></span></button></td>
+								<td>16/5/2018</td>
+								<td>#1</td>
+								<td>18:35</td>
+								<td>Syspro</td>
+							  <td> Codeine</td>
+							</tr>
+							<tr>
+							<tr>
+								<td colspan="12" class="hiddenRow">
+									<div class="accordian-body collapse" id="demo2" style="color:black;"> 
+									  <table class="table table-striped">
+											<thead>
+												<tr><td><a href="WorkloadURL"> link</a></td><td>Details</td><td>Details</td></tr>
+												<tr><th>#1</th><th>#2</th><th>#3</th><th> #4</th><th> #5</th><th>#6</th></tr>
+											</thead>
+											<tbody>
+												<tr><td>#1</td><td>#2</td><td>#3</td><td>#4</td><td>#5</td><td><a href="#" class="btn btn-default btn-sm">
+										  <i class="glyphicon glyphicon-cog"></i></a></td></tr>
+												
+											 
+											
+											</tbody>
+										</table>
+									  
+									</div>
+								</td>
+							</tr>							</tr>
+							<tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+								<td><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" style="color:black;"></span></button></td>
+								<td>16/5/2018</td>
+								<td>#1</td>
+								<td>18:35</td>
+								<td>New</td>
+							  <td> Codeine</td>
+							</tr>
+							<tr>
+							<tr>
+								<td colspan="12" class="hiddenRow">
+									<div class="accordian-body collapse" id="demo3" style="color:black;"> 
+									  <table class="table table-striped">
+											<thead>
+												<tr><td><a href="WorkloadURL"> link</a></td><td>Details</td><td>Details</td></tr>
+												<tr><th>#1</th><th>#2</th><th>#3</th><th> #4</th><th> #5</th><th>#6</th></tr>
+											</thead>
+											<tbody>
+												<tr><td>#1</td><td>#2</td><td>#3</td><td>#4</td><td>#5</td><td><a href="#" class="btn btn-default btn-sm">
+										  <i class="glyphicon glyphicon-cog"></i></a></td></tr>
+												
+											 
+											
+											</tbody>
+										</table>
+									  
+									</div>
+								</td>
+							</tr>							</tr>
+						</tbody>
+					</table>
+			</div>
+			
+		</div> 
+			
+	</div>
+</div>
+      
+
+
+<!--- -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
