@@ -1,5 +1,6 @@
+
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,13 +9,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
           integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <title>Scrum</title>
 </head>
 
-
+<!--<style type="text/css">
+    body { background: CornflowerBlue !important; }
+</style>
+-->
 <body>
 
 <!-- Navigation bar  Start -->
@@ -27,7 +31,7 @@
         <div class="collapse navbar-collapse col-md-4" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">MyProjects</a>
+                    <a class="nav-link" href="MyProjects.html">MyProjects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">MyTeams</a>
@@ -68,61 +72,98 @@
 		<ol class ="breadcrumb">
 			<li class="breadcrumb-item" ><a href="base.html">>home</a></li>
 			<li class="breadcrumb-item" ><a href="MyProjects.html">>MyProjects</a></li>
-			<li class="breadcrumb-item" ><a href="CreateProject.html">>CreateProject</a></li>
 		</ol>
 	</nav> 
 	<div class="col-md-6"></div>
 
+
 </div>
-<!--form-->
-   <div class="row">
-        <div class="col-md-4"></div>
-        <div class="card col-md-4" style="padding-top: 30px;">
-            <form th:action="@{/signup}"  method="POST">
-                <div align="center"><h3>Create Project</h3></div>
-                <br/>
-                <div class="form-group row">
-                    <label for="inputName3" class="col-sm-3 col-form-label">Project name</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="firstname" class="form-control" id="inputfirstname3" placeholder="Project name">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputSurname3" class="col-sm-3 col-form-label">Set a Description</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="lastname" class="form-control" id="inputlastname3" placeholder="Description">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputUsr3" class="col-sm-3 col-form-label">Set a deadline</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="username" class="form-control" id="inputusername3" placeholder="DD/MM/YYYY">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-3 col-form-label">Invite members</label>
-                    <div class="col-sm-9">
-                        <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Enter User or Team name">
-                    </div>
-                </div>
- 
-                <div class="form-group row">
-                    <div class="col-md-5" >
-                        <a id="forgpass" style="font-size:large; color:red;" href="#">Clear</a>
-                    </div>
-					<div class = "row">
-					
-						<div class="col-md-3">
-							<button type="submit" class="btn btn-primary">Create Project</button>
-						</div>
-					</div>
-                </div>
-            </form>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
+</br>
+
+<!--new project button-->
+<div class="row">
+	<div class="col-md-8"></div>
+	<div class="col-md-2" align="right">
+	
+		<a class="btn btn-success" href="CreateProject.html" role="button">New Project</a>
+	
+	</div>
 </div>
-      
+
+</br>
+
+<!--table-->
+</br>
+
+    <div class="row">
+		<div class="col-md-2"></div>
+
+		<div class="col-md-8" align="center">
+        <table class="table">
+						<thead>
+							<tr>
+                                <th scope="col"></th>
+								<th scope="col">Project</th>
+								<th scope="col">Team</th>
+								<th scope="col">Last Commit</th>
+								<th scope="col">
+								    <div class="row">
+										<div class="dropdown col-md-2" >
+											<button type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown">
+												Sort by
+											</button>
+											<div class="dropdown-menu">
+												<a class="dropdown-item" href="#">Date</a>
+												<a class="dropdown-item" href="#">Project</a>
+												<a class="dropdown-item" href="#">Team</a>
+											</div>
+										</div>
+									</div>
+
+								</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							<tr data-toggle="collapse"  class="accordion-toggle">
+                                <th scope="row"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" style="color:black;"></span></button></th>
+								<td>Project 1
+									</br>
+									<div class="row">Last update at 19:55</div>
+								</td>
+								<td>Codeine</td>
+								<td>Updated home page at 19:55</td>
+
+							</tr>
+
+							<tr data-toggle="collapse" class="accordion-toggle">
+                                <th scope="row"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" style="color:black;"></span></button></th>
+								<td>Project 2
+									</br>
+									<div class="row">Last update at 19:55</div>
+								</td>
+								<td>Syspreto</td>
+								<td>Updated home page at 19:55</td>
+
+							</tr>
+	
+							<tr data-toggle="collapse"  class="accordion-toggle">
+                                <th scope="row"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open" style="color:black;"></span></button></th>
+								<td>Project 3
+									</br>
+									<div class="row">Last update at 19:57</div>
+								</td>
+								<td>EAM</td>
+								<td>Updated home page at 19:57</td>
+
+							</tr>
+
+						</tbody>
+                    </table>
+
+	</div>
+	
+</div>
 
 
 <!--- -->
