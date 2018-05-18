@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -63,12 +63,13 @@
     </nav>
 </div>
 <!-- Navigation bar  End -->
+<div class="container">
 <div class="row">
 	<nav aria-label="breadcrumb col-md-4">
 		<ol class ="breadcrumb">
-			<li class="breadcrumb-item" ><a href="base.html">>home</a></li>
-			<li class="breadcrumb-item" ><a href="MyProjects.html">>MyProjects</a></li>
-			<li class="breadcrumb-item" ><a href="CreateProject.html">>CreateProject</a></li>
+			<li class="breadcrumb-item" ><a th:href="@{/home}">>home</a></li>
+			<li class="breadcrumb-item" ><a th:href="@{/myprojects}">>MyProjects</a></li>
+			<li class="breadcrumb-item active" ><a th:href="@{/createproject}">>CreateProject</a></li>
 		</ol>
 	</nav> 
 	<div class="col-md-6"></div>
@@ -122,7 +123,6 @@
         <div class="col-md-4"></div>
     </div>
 </div>
-      
 
 
 <!--- -->

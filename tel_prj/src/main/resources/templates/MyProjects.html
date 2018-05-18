@@ -67,11 +67,12 @@
     </nav>
 </div>
 <!-- Navigation bar  End -->
+<div class="container">
 <div class="row">
 	<nav aria-label="breadcrumb col-md-4">
 		<ol class ="breadcrumb">
-			<li class="breadcrumb-item" ><a href="base.html">>home</a></li>
-			<li class="breadcrumb-item" ><a href="MyProjects.html">>MyProjects</a></li>
+			<li class="breadcrumb-item" ><a th:href="@{/home}">>home</a></li>
+			<li class="breadcrumb-item active" ><a th:href="@{myprojects}">>MyProjects</a></li>
 		</ol>
 	</nav> 
 	<div class="col-md-6"></div>
@@ -85,7 +86,7 @@
 	<div class="col-md-8"></div>
 	<div class="col-md-2" align="right">
 	
-		<a class="btn btn-success" href="CreateProject.html" role="button">New Project</a>
+		<a class="btn btn-success" th:href="@{/createproject}" role="button">New Project</a>
 	
 	</div>
 </div>
@@ -164,7 +165,7 @@
 	</div>
 	
 </div>
-
+</div>
 
 <!--- -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
