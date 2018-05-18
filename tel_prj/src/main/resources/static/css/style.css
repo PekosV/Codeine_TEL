@@ -19,6 +19,14 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
+.breadcrumb >.active a{
+    color: black;
+}
+
+.breadcrumb > .a{
+    color:green;
+}
+
 body {
     background-color:#eaeff7;
 }

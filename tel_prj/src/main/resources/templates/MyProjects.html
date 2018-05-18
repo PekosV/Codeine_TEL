@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse col-md-4" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="MyProjects.html">MyProjects</a>
+					<a class="nav-link" th:href="@{/myprojects}">MyProjects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">MyTeams</a>
@@ -67,39 +67,45 @@
     </nav>
 </div>
 <!-- Navigation bar  End -->
+
 <div class="container">
+	<br>
 <div class="row">
 	<nav aria-label="breadcrumb col-md-4">
 		<ol class ="breadcrumb">
-			<li class="breadcrumb-item" ><a th:href="@{/home}">>home</a></li>
-			<li class="breadcrumb-item active" ><a th:href="@{myprojects}">>MyProjects</a></li>
+			<li class="breadcrumb-item" ><a th:href="@{/home}">Home</a></li>
+			<li class="breadcrumb-item active" ><a th:href="@{myprojects}">MyProjects</a></li>
 		</ol>
 	</nav> 
 	<div class="col-md-6"></div>
 
 
 </div>
-</br>
 
 <!--new project button-->
 <div class="row">
-	<div class="col-md-8"></div>
-	<div class="col-md-2" align="right">
+	<div class="col-md-10">
 	
-		<a class="btn btn-success" th:href="@{/createproject}" role="button">New Project</a>
+		<a class="btn btn-primary" th:href="@{/createproject}" role="button">New Project</a>
 	
+	</div>
+	<div class="dropdown col-md-2" >
+		<button type="button" class="btn btn-secondary dropdown-toggle " data-toggle="dropdown">
+			Sort by
+		</button>
+		<div class="dropdown-menu">
+			<a class="dropdown-item" href="#">Date</a>
+			<a class="dropdown-item" href="#">Project</a>
+			<a class="dropdown-item" href="#">Team</a>
+		</div>
 	</div>
 </div>
 
-</br>
+	<br>
 
 <!--table-->
-</br>
 
     <div class="row">
-		<div class="col-md-2"></div>
-
-		<div class="col-md-8" align="center">
         <table class="table">
 						<thead>
 							<tr>
@@ -107,21 +113,6 @@
 								<th scope="col">Project</th>
 								<th scope="col">Team</th>
 								<th scope="col">Last Commit</th>
-								<th scope="col">
-								    <div class="row">
-										<div class="dropdown col-md-2" >
-											<button type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown">
-												Sort by
-											</button>
-											<div class="dropdown-menu">
-												<a class="dropdown-item" href="#">Date</a>
-												<a class="dropdown-item" href="#">Project</a>
-												<a class="dropdown-item" href="#">Team</a>
-											</div>
-										</div>
-									</div>
-
-								</th>
 							</tr>
 						</thead>
 
@@ -143,7 +134,7 @@
 									</br>
 									<div class="row">Last update at 19:55</div>
 								</td>
-								<td>Syspreto</td>
+								<td>Syspro</td>
 								<td>Updated home page at 19:55</td>
 
 							</tr>
@@ -161,8 +152,6 @@
 
 						</tbody>
                     </table>
-
-	</div>
 	
 </div>
 </div>

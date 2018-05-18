@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse col-md-4" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">MyProjects</a>
+                    <a class="nav-link" th:href="@{/myprojects}">MyProjects</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">MyTeams</a>
@@ -71,10 +71,9 @@
 <div class="row">
     <nav aria-label="breadcrumb col-md-4">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item" aria-current="page" ><a th:href="@{/home}">Home</a></li>
+            <li class="breadcrumb-item active" ><a th:href="@{/home}">Home</a></li>
         </ol>
     </nav>
-	
 </div>
 <!--table-->
     <div class="row">
@@ -82,7 +81,7 @@
 			<div class="panel-heading" style="color:#005d8a;"><h3>FEED</h3></div>
 		</div>
 		<div class="dropdown col-md-2" >
-			<button type="button" class="btn btn-primary dropdown-toggle " data-toggle="dropdown">
+			<button type="button" class="btn btn-secondary dropdown-toggle " data-toggle="dropdown">
 				Sort by
 			</button>
 			<div class="dropdown-menu">
