@@ -1,4 +1,6 @@
 # Codeine_TEL
 
-login me username:nikos
+Το 2ο sprint βρίσκεται στο tel_prj
+
+login με username:nikos
          password: yava
