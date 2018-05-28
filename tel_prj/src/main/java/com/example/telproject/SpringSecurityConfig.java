@@ -62,17 +62,17 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSec) throws Exception {
         httpSec.authorizeRequests()
                     .antMatchers("/").hasAuthority("USER")
-                   /* .antMatchers("/").hasRole("USER")
-                    .antMatchers("/index").hasRole("USER")
-                    .antMatchers("/greeting").hasRole("USER")
-                    .antMatchers("/home").hasRole("USER")
-                    .antMatchers("/signup").permitAll()*/
+                    .antMatchers("/index").hasAuthority("USER")
+                    .antMatchers("/greeting").hasAuthority("USER")
+                    .antMatchers("/home").hasAuthority("USER")
+                    .antMatchers("/signup").permitAll()
                 .and()
                     .formLogin().loginPage("/login").permitAll()
                 .and()
                     .logout().logoutSuccessUrl("/login?logout").permitAll()
                 .and()
-                    .exceptionHandling().accessDeniedPage("/403");
+                    .exceptionHandling().accessDeniedPage("/403")
+                .and().csrf().disable();
 
     }
 }
