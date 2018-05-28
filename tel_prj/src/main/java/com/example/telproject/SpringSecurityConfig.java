@@ -7,10 +7,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import javax.sql.DataSource;
@@ -20,12 +16,10 @@ import javax.sql.DataSource;
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private PasswordEncoder myPasswordEncoderValue=null;
-    private final String USER_NAME_QUERY="select email,password from user  where email=?";
-    private final String USER_ROLE_QUERY="select email,role "+"from user "+" where email = ?";
+    private final String USER_NAME_QUERY="select username,password,iduser from user  where username=?";
+    private final String USER_ROLE_QUERY="select info.username,info.role "+"from user info "+" where info.username = ?";
     @Autowired
     private DataSource dataSource;
-
-
 
     @Autowired
     private PasswordEncoder passwordEncoder;
@@ -66,17 +60,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSec) throws Exception {
-        httpSec.csrf().disable()
-                .authorizeRequests()
-                    .antMatchers("/").hasRole("USER")
+        httpSec.authorizeRequests()
+                    .antMatchers("/").hasAuthority("USER")
+                   /* .antMatchers("/").hasRole("USER")
                     .antMatchers("/index").hasRole("USER")
                     .antMatchers("/greeting").hasRole("USER")
                     .antMatchers("/home").hasRole("USER")
-                    .antMatchers("/signup").permitAll()
+                    .antMatchers("/signup").permitAll()*/
                 .and()
                     .formLogin().loginPage("/login").permitAll()
-                    .usernameParameter("username")
-                    .passwordParameter("password")
                 .and()
                     .logout().logoutSuccessUrl("/login?logout").permitAll()
                 .and()

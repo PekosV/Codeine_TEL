@@ -22,14 +22,12 @@ USE `mydb` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`user` (
   `iduser` INT  NOT NULL AUTO_INCREMENT,
-  `role` INT NOT NULL,
 `firstname` VARCHAR(45) NOT NULL,
 `lastname` VARCHAR(45) NOT NULL,
   `username` VARCHAR(45) NOT NULL,
   `password` VARCHAR(150) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
-  `customer_boolean` INT NOT NULL,
-  `admin_boolean` INT NOT NULL,
+  `role`  VARCHAR(45) NOT NULL,
   `fee` INT NOT NULL,
   PRIMARY KEY (`iduser`),
   UNIQUE INDEX `iduser_UNIQUE` (`iduser` ASC),

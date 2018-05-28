@@ -12,8 +12,8 @@ import java.util.Map;
 public class LoginController {
 
 
-    @RequestMapping(value="/login")
-    public String getLoginForm2() {
+    @RequestMapping(value="/login", method = RequestMethod.GET)
+    public String getLogin() {
         //System.out.println(allParams);
         return "login";
     }

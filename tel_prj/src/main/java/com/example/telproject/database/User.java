@@ -15,7 +15,7 @@ public class User {
     private Integer  id ;
 
     @Column(name="role")
-    private Integer role;
+    private String role;
 
     @Column(name="username")
     private String username;
@@ -32,13 +32,6 @@ public class User {
 
     @Column(name="password")
     private String password;
-
-    @Column(name="customer_boolean")
-    private Integer customer_boolean;
-
-    @Column(name="admin_boolean")
-    private Integer admin_boolean;
-
 
     @Column(name="fee")
     private Integer fee;
@@ -57,9 +50,7 @@ public class User {
         this.firstname = firstname;
         this.lastname = lastname;
         this.password = password;
-        this.customer_boolean = 0;
-        this.admin_boolean= 0;//fix this in the future
-        this.role = 0;
+        this.role = "USER";
         this.fee =0 ;
 
     }
@@ -72,11 +63,11 @@ public class User {
         this.id = id;
     }
 
-    public Integer getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Integer role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
@@ -102,22 +93,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Integer getCustomer_boolean() {
-        return customer_boolean;
-    }
-
-    public void setCustomer_boolean(Integer customer_boolean) {
-        this.customer_boolean = customer_boolean;
-    }
-
-    public Integer getAdmin_boolean() {
-        return admin_boolean;
-    }
-
-    public void setAdmin_boolean(Integer admin_boolean) {
-        this.admin_boolean = admin_boolean;
     }
 
     public Integer getFee() {
