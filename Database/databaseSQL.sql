@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`user` (
 `firstname` VARCHAR(45) NOT NULL,
 `lastname` VARCHAR(45) NOT NULL,
   `username` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(150) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `customer_boolean` INT NOT NULL,
   `admin_boolean` INT NOT NULL,
