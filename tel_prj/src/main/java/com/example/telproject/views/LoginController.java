@@ -1,4 +1,4 @@
-package com.example.telproject;
+package com.example.telproject.views;
 
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -20,7 +20,7 @@ public class LoginController {
                            @AuthenticationPrincipal final UserDetails userDetails,
                            Model model) {
         if (userDetails!=null && allParams.get("logout")==null){
-            return "redirect:/home";
+            return "redirect:/";
         }
         //System.out.println(allParams);
         return "login";

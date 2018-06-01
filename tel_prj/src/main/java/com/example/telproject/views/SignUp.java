@@ -1,4 +1,4 @@
-package com.example.telproject;
+package com.example.telproject.views;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

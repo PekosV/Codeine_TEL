@@ -1,4 +1,4 @@
-package com.example.telproject;
+package com.example.telproject.services;
 
 import com.example.telproject.database.User;
 import com.example.telproject.database.repositories.UserRepository;
@@ -74,7 +74,7 @@ public class UserController {
 
 
 
-		return "redirect:/home";
+		return "redirect:/";
 	}
 
 
